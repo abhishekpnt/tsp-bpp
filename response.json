@@ -1,0 +1,55 @@
+{
+    "id": "api.content.search",
+    "ver": "1.0",
+    "ts": "2024-05-30T06:17:55.209Z",
+    "params": {
+        "resmsgid": "5a3d4f90-1e4c-11ef-aa19-c16def6ab2ba",
+        "msgid": "a117c1a3-d60e-4339-92ba-b3556adf4d90",
+        "status": "successful",
+        "err": null,
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "count": 227,
+        "content": [
+            {
+                "trackable": {
+                    "enabled": "Yes",
+                    "autoBatch": "Yes"
+                },
+                "identifier": "do_113952334815797248129",
+                "primaryCategory": "Course",
+                "channel": "0137541424673095687",
+                "name": "sameple course",
+                "mimeType": "application/vnd.ekstep.content-collection",
+                "contentType": "Collection",
+                "pkgVersion": 2,
+                "objectType": "Content",
+                "orgDetails": {
+                    "email": null,
+                    "orgName": "Sunbird Org"
+                }
+            },
+            {
+                "trackable": {
+                    "enabled": "Yes",
+                    "autoBatch": "Yes"
+                },
+                "identifier": "do_11395213128798208017",
+                "primaryCategory": "Course",
+                "channel": "0137541424673095687",
+                "name": "Course Unit 1",
+                "mimeType": "application/vnd.ekstep.content-collection",
+                "contentType": "Course",
+                "pkgVersion": 2,
+                "objectType": "Content",
+                "orgDetails": {
+                    "email": null,
+                    "orgName": "Sunbird Org"
+                }
+            }
+       
+        ]
+    }
+}

@@ -1,0 +1,583 @@
+{
+    "statusCode": 200,
+    "statusMessage": "Success",
+    "errorMessage": "",
+    "responseData": [
+        {
+            "id": "6566e23be4b0cbbc43ff794e",
+            "internal": true,
+            "external": false,
+            "email": null,
+            "operation": null,
+            "userId": "2192",
+            "firstName": null,
+            "lastName": null,
+            "title": "The Art of Storytelling ",
+            "orgId": "1",
+            "description": "Are you ready to enhance your analytical prowess with the persuasive power of storytelling? \n we'll explore how the art of storytelling can elevate your analytical insights, enabling you to communicate complex data effectively and drive impactful decision-making within your product team.\n\nKey Learning Objectives:\n\n1. Translating Data into Stories.\n2. Creating Data-Driven Narratives.\n3. Influencing Decision-Making Foward\n4. Data-informed choices that drive success.\n5. Engaging Stakeholders.\n6. Storytelling for Product Roadmaps\n7. Visualizing Data.\n\n\nPlease join offline in the Training room if you're in the office. You can also click on the meeting link to attend online.",
+            "type": "Classroom",
+            "date": "2024-01-09",
+            "time": "2024-01-09 11:30",
+            "duration": "60",
+            "location": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzA5MWUzN2QtOTBlNC00MGQyLTgxYjgtYWNiMjczZGFjODRh%40thread.v2/0?context=%7b%22Tid%22%3a%22d2f80462-bf28-4055-8ef3-085d8e4b2ed0%22%2c%22Oid%22%3a%2232221d37-9908-457f-ad57-f3a9f498dced%22%7d",
+            "trainerFirstName": "Pranjal ",
+            "trainerLastName": "Jain",
+            "trainerId": "2192",
+            "labels": [
+                {
+                    "label": "NXT",
+                    "url": ""
+                }
+            ],
+            "createdDate": "2023-11-29 07:03:23",
+            "updatedDate": "2024-01-09 07:13:40",
+            "createdBy": "2192",
+            "updatedBy": "2192",
+            "color": "#d9981a",
+            "feedbackCount": 4,
+            "tags": null,
+            "sessionId": null,
+            "requestId": null,
+            "countryId": 1,
+            "unitId": 51,
+            "unitName": "NXT",
+            "avgTrainingFeedback": 4.178571,
+            "evaluationQuestionTemplate": null,
+            "userTrainingDetails": [
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Pranjal ",
+                    "lastName": "Jain",
+                    "userId": "2192",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Esakki ",
+                    "lastName": "Raju E",
+                    "userId": "1869",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Rithuparna",
+                    "lastName": "K D",
+                    "userId": "1876",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Kalyani",
+                    "lastName": "Vaidyanathan",
+                    "userId": "1309",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Rajeshwaran",
+                    "lastName": "M",
+                    "userId": "2145",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Abhijith",
+                    "lastName": "K",
+                    "userId": "1877",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Imthiyas",
+                    "lastName": "V",
+                    "userId": "1134",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Sakthivel",
+                    "lastName": "Govindan",
+                    "userId": "437",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Gurram",
+                    "lastName": "Vishnu Priya",
+                    "userId": "844",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "AKHILA",
+                    "lastName": "K S",
+                    "userId": "2321",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Sandhya",
+                    "lastName": "Bodayana Hiriyanna",
+                    "userId": "1940",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Sarvani swapna priya",
+                    "lastName": "yallapragada",
+                    "userId": "1868",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Manoj",
+                    "lastName": "Solleti",
+                    "userId": "2116",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Devi",
+                    "lastName": "Gopinath ",
+                    "userId": "1131",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Abhijith",
+                    "lastName": "P J",
+                    "userId": "1864",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Monika",
+                    "lastName": "Bellary",
+                    "userId": "2110",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "S P",
+                    "lastName": "Aruna",
+                    "userId": "2377",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Veena",
+                    "lastName": "Ramesh",
+                    "userId": "1701",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Preet",
+                    "lastName": "Bharat",
+                    "userId": "2212",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Bharathwaj",
+                    "lastName": "Shankar",
+                    "userId": "673",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Abhilash",
+                    "lastName": "M M",
+                    "userId": "1987",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Sowbhagya S",
+                    "lastName": "Thantry",
+                    "userId": "1396",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Alen ",
+                    "lastName": "Kuriakose",
+                    "userId": "1878",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "ARATHI",
+                    "lastName": "VINOD",
+                    "userId": "2312",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "P",
+                    "lastName": "SREELAKSHMI",
+                    "userId": "2302",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "6566e23be4b0cbbc43ff794e",
+                    "firstName": "Rahul",
+                    "lastName": "R Nair",
+                    "userId": "2310",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                }
+            ],
+            "feedback": null,
+            "skills": null,
+            "trainingLevel": "Beginner",
+            "deleted": false
+        },
+        {
+            "id": "65684d6fe4b0cbbc43ff7957",
+            "internal": true,
+            "external": false,
+            "email": null,
+            "operation": null,
+            "userId": "2145",
+            "firstName": null,
+            "lastName": null,
+            "title": "Principles of atomic design",
+            "orgId": "1",
+            "description": "Introduction and Basic Principles of atomic design\n\nBy\nPreet Bharat and Rajeshwaran M",
+            "type": "Online",
+            "date": "2024-01-23",
+            "time": "2024-01-23 11:00",
+            "duration": "45",
+            "location": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2Y1NGU1Y2ItOWRmMy00OWVmLWFkMjEtZjZmZGViN2M0ODZm%40thread.v2/0?context=%7b%22Tid%22%3a%22d2f80462-bf28-4055-8ef3-085d8e4b2ed0%22%2c%22Oid%22%3a%22d96b64fd-39c3-4dca-9a10-4d0cb5c59c69%22%7d",
+            "trainerFirstName": "Rajeshwaran",
+            "trainerLastName": "M",
+            "trainerId": "2145",
+            "labels": [
+                {
+                    "label": "",
+                    "url": ""
+                },
+                {
+                    "label": "",
+                    "url": ""
+                }
+            ],
+            "createdDate": "2023-11-30 08:53:03",
+            "updatedDate": "2024-01-23 03:42:50",
+            "createdBy": "2145",
+            "updatedBy": "2145",
+            "color": "#1a83d9",
+            "feedbackCount": 6,
+            "tags": null,
+            "sessionId": null,
+            "requestId": null,
+            "countryId": 1,
+            "unitId": 51,
+            "unitName": "NXT",
+            "avgTrainingFeedback": 4.4761906,
+            "evaluationQuestionTemplate": null,
+            "userTrainingDetails": [
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Rajeshwaran",
+                    "lastName": "M",
+                    "userId": "2145",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Rithuparna",
+                    "lastName": "K D",
+                    "userId": "1876",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Esakki ",
+                    "lastName": "Raju E",
+                    "userId": "1869",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Abhijith",
+                    "lastName": "K",
+                    "userId": "1877",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Imthiyas",
+                    "lastName": "V",
+                    "userId": "1134",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Naveen",
+                    "lastName": "Prasath",
+                    "userId": "1601",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Subhradip",
+                    "lastName": "Das",
+                    "userId": "2195",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Sakthivel",
+                    "lastName": "Govindan",
+                    "userId": "437",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Gurram",
+                    "lastName": "Vishnu Priya",
+                    "userId": "844",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Sarvani swapna priya",
+                    "lastName": "yallapragada",
+                    "userId": "1868",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Devi",
+                    "lastName": "Gopinath ",
+                    "userId": "1131",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Manoj",
+                    "lastName": "Solleti",
+                    "userId": "2116",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Preet",
+                    "lastName": "Bharat",
+                    "userId": "2212",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Sowbhagya S",
+                    "lastName": "Thantry",
+                    "userId": "1396",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Jesna Thejaswini",
+                    "lastName": "John",
+                    "userId": "1136",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Shashank",
+                    "lastName": "B Akkasali",
+                    "userId": "2355",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Alen ",
+                    "lastName": "Kuriakose",
+                    "userId": "1878",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Abhijith",
+                    "lastName": "P J",
+                    "userId": "1864",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Pranjal ",
+                    "lastName": "Jain",
+                    "userId": "2192",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Nitika",
+                    "lastName": "Bajaj",
+                    "userId": "2178",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Amin Safeeq ",
+                    "lastName": "Ahammed",
+                    "userId": "1872",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": true
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Harshit",
+                    "lastName": "Rao",
+                    "userId": "703",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Bhosale Palash",
+                    "lastName": "Ashok",
+                    "userId": "2177",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Karthikeyan",
+                    "lastName": "Ramasamy",
+                    "userId": "1732",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Muhammed",
+                    "lastName": "muneer.c",
+                    "userId": "1241",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Manas Mohan ",
+                    "lastName": "Swain",
+                    "userId": "1802",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                },
+                {
+                    "id": "65684d6fe4b0cbbc43ff7957",
+                    "firstName": "Ashwin",
+                    "lastName": "Sam George",
+                    "userId": "2313",
+                    "feedback": null,
+                    "rating": null,
+                    "feedbackCheck": false
+                }
+            ],
+            "feedback": null,
+            "skills": null,
+            "trainingLevel": "Beginner",
+            "deleted": false
+        }
+       
+    ]
+}
