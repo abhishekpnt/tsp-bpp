@@ -1,0 +1,53 @@
+{
+    "id": "api.content.search",
+    "responseCode": "OK",
+    "response": {
+        "courses": [
+            {
+                "type": "training",
+                "id": "1245",
+                "name": "Course 1",
+                "mentorId": "U1234",
+                "batchId": "B001",
+                "tId": "T001"
+            },
+            {
+                "type": "training",
+                "id": "1246",
+                "name": "Course 2",
+                "mentorId": "U1235",
+                "batchId": "B002"
+            }
+        ],
+        "users": [
+            {
+                "id": "U1234",
+                "name": "Vinu"
+            },
+            {
+                "id": "U1235",
+                "name": "John"
+            }
+        ],
+        "batchess": [
+            {
+                "id": "B001",
+                "name": "Batch 1"
+            },
+            {
+                "id": "B002",
+                "name": "Batch 2"
+            }
+        ],
+        "text": [
+            {
+                "id": "T001",
+                "name": "T 1"
+            },
+            {
+                "id": "T002",
+                "name": "T 2"
+            }
+        ]
+    }
+}

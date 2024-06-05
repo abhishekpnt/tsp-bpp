@@ -17,8 +17,8 @@ const providerSchema =
         },
     ],
     descriptor: {
-        name: "Ekstep - Sunbird",
-        short_desc: "Ekstep Sunbird Building Blocks",
+        name: "Test - ",
+        short_desc: "Test ",
         images: [
             {
                 size_type: "sm",
@@ -26,7 +26,7 @@ const providerSchema =
             }
         ]
     },
-    id: "Ekstep",
+    id: "Test",
     items: [
     ],
     fulfillments: [
@@ -43,32 +43,18 @@ const providerSchema =
     ]
 }
 
-const creatorSchema= {
-    descriptor: {
-        name: 'creator',
-        short_desc:'orgDetails.orgName'
-    },
-}
-
-
-const orderCreatorSchema= {
-    descriptor: {
-        name: 'firstName'+'lastName',
-        short_desc:'orgDetails.orgName'
-    },
-}
-
-const orderSchema= {
-    customer:orderCreatorSchema
-}
 
 const itemSchema = {
     category_ids: [
     ],
-    creator:creatorSchema,
+    creator: {
+        descriptor: {
+            name: 'trainerLastName'
+        }
+    },
     descriptor: {
         long_desc: "Long description of the item",
-        name: 'name',
+        name: 'trainerFirstName',
         short_desc: "short desc"
     },
     display: true,
@@ -110,7 +96,30 @@ const itemSchema = {
     ]
 }
 
-const responsePath='result.content'
+const transformSchema = {
+    courses: {
+      type: 'type',
+      id: 'id',
+      name: 'name',
+      mentor: (course, context) => {
+        const mentor = context.users.find((user) => user.id === course.mentorId);
+        return mentor ? { id: mentor.id, name: mentor.name } : null;
+      },
+      batch: (course, context) => {
+        const batch = context.batchess.find(
+          (batch) => batch.id === course.batchId
+        );
+        return batch ? { id: batch.id, name: batch.name } : null;
+      },
+      text: (course, context) => {
+        const text = context.text.find((text) => text.id === course.tId);
+        return text ? { id: text.id, name: text.name } : null;
+      },
+    },
+  };
+const transformPath = 'response'
 
-const urlPath='http://127.0.0.1:3022/response2.json'
-module.exports = { providerSchema, itemSchema ,responsePath,urlPath};
+const responsePath = 'response.courses'
+const urlPath='http://127.0.0.1:3022/response3.json'
+
+module.exports = { providerSchema, itemSchema, responsePath,urlPath ,transformSchema,transformPath};

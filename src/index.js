@@ -21,7 +21,7 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/webhook", (req, res) => {
-  console.log("/webhook: incoming request \n%o ", JSON.stringify(req.body));
+  // console.log("/webhook: incoming request \n%o ", JSON.stringify(req.body));
   service.webhook(req, res);
 
 });

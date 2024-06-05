@@ -1,5 +1,6 @@
 const { morphism } = require('morphism');
 const { message } = require('../schemas/base');
+const { mergeData } = require('./utils');
 const fs = require('fs');
 const path = require('path');
 const async = require('async');
@@ -31,12 +32,21 @@ const providerUrls = Object.entries(providerSchemas).map(([name, schema]) => ({
 const fetchProviders = async ({ name, url }) => {
     try {
         const providerResponse = await axios.get(url);
-        const data = providerResponse.data;
-        data.name = name; // Add the provider name to the data for identification
-        return data;
+        let fullData = providerResponse.data;
+        fullData.name = name; // Add the provider name to the data for identification
+        const providerSchema = providerSchemas[name];
+        if (providerSchema && providerSchema.transformSchema && providerSchema.transformPath) {
+            const path = providerSchema.transformPath;
+            if (fullData[path]) {
+                fullData.response = mergeData(fullData[path], providerSchema.transformSchema);
+            } else {
+                console.warn(`Path ${path} not found in provider data`);
+            }
+        }
+        return fullData;
     } catch (error) {
-        console.error(`Error fetching provider information from ${url}:`, error);
-        throw error;
+        console.error(`Error fetching provider information from ${url}:`, error.message);
+        throw new Error(`Failed to fetch data from provider: ${name}`);
     }
 };
 
