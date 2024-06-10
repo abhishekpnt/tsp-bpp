@@ -1,20 +1,6 @@
 const providerSchema =
 {
     categories: [
-        {
-            descriptor: {
-                code: "LANGUAGE-COURSES",
-                name: "Language Courses"
-            },
-            id: "LANGUAGE-COURSES"
-        },
-        {
-            id: "SKILL-DEVELOPMENT-COURSES",
-            descriptor: {
-                code: "SKILL-DEVELOPMENT-COURSES",
-                name: "Skill development Courses"
-            }
-        },
     ],
     descriptor: {
         name: "Test - ",
@@ -49,7 +35,7 @@ const itemSchema = {
     ],
     creator: {
         descriptor: {
-            name: 'trainerLastName'
+            name: 'mentor.name'
         }
     },
     descriptor: {

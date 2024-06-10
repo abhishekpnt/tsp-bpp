@@ -17,8 +17,8 @@ const providerSchema =
         },
     ],
     descriptor: {
-        name: "Ekstep - Sunbird",
-        short_desc: "Ekstep Sunbird Building Blocks",
+        name: "Astrika",
+        short_desc: "Astrika Content",
         images: [
             {
                 size_type: "sm",
@@ -26,7 +26,7 @@ const providerSchema =
             }
         ]
     },
-    id: "Ekstep",
+    id: "Astrika",
     items: [
     ],
     fulfillments: [
@@ -113,4 +113,15 @@ const itemSchema = {
 const responsePath='result.content'
 
 const urlPath='http://127.0.0.1:3022/response2.json'
-module.exports = { providerSchema, itemSchema ,responsePath,urlPath};
+
+const urlConfig = {
+    url: 'https://aastrika-stage.tarento.com/apis/public/v8/courseRecommendation/publicSearch/getcourse',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: {
+      query: 'asha',
+      language: 'en'
+    }
+  };
+module.exports = { providerSchema, itemSchema ,responsePath,urlConfig};

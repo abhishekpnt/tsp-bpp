@@ -25,20 +25,22 @@ fs.readdirSync(schemasDir).forEach(file => {
 // Assuming each schema file exports an object with a urlPath field
 const providerUrls = Object.entries(providerSchemas).map(([name, schema]) => ({
     name,
-    url: schema.urlPath
+    urlConfig: schema.urlConfig
 }));
 
 // Function to fetch provider data from the API
-const fetchProviders = async ({ name, url }) => {
+const fetchProviders = async ({ name, urlConfig }) => {
     try {
-        const providerResponse = await axios.get(url);
+        const providerResponse = await axios.post(urlConfig.url, urlConfig.data, { headers: urlConfig.headers })
+            ;
         let fullData = providerResponse.data;
         fullData.name = name; // Add the provider name to the data for identification
         const providerSchema = providerSchemas[name];
         if (providerSchema && providerSchema.transformSchema && providerSchema.transformPath) {
             const path = providerSchema.transformPath;
             if (fullData[path]) {
-                fullData.response = mergeData(fullData[path], providerSchema.transformSchema);
+                fullData[path] = mergeData(fullData[path], providerSchema.transformSchema);
+                console.log(JSON.stringify(fullData))
             } else {
                 console.warn(`Path ${path} not found in provider data`);
             }
@@ -53,10 +55,12 @@ const fetchProviders = async ({ name, url }) => {
 // Webhook function to handle the request
 const webhook = async (req, res) => {
     console.log('providerUrls', providerUrls);
+    console.log('schema', providerSchemas);
+
     const { context } = req.body;
 
     try {
-        if (context.action === 'search') {
+        if (context?.action === 'search') {
             // Make parallel API calls to fetch provider information
             async.map(providerUrls, fetchProviders, (err, dataArray) => {
                 if (err) {
