@@ -3,7 +3,7 @@ const catalogMessage = {
     message:{
         catalog: {
             descriptor: {
-                name: "Catalog for English courses"
+                name: "Catalog"
             },
             providers: []
         }
