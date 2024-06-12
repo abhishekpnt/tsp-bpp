@@ -1,14 +1,15 @@
 const { morphism } = require('morphism');
-const { message } = require('../schemas/base');
+const { catalogMessage, orderMessage } = require('../schemas/base');
 const { mergeData } = require('./utils');
 const fs = require('fs');
 const path = require('path');
-const async = require('async');
 const axios = require('axios');
 const lodash = require('lodash');
+const objectMapper = require('object-mapper');
 
 // Directory where provider schemas are stored
 const schemasDir = path.join(__dirname, '../schemas');
+let searchResponseData = null; // Variable to store search response data
 
 // Object to hold the dynamically imported schemas
 const providerSchemas = {};
@@ -22,7 +23,6 @@ fs.readdirSync(schemasDir).forEach(file => {
 });
 
 // Generate providerUrls dynamically from the providerSchemas
-// Assuming each schema file exports an object with a urlPath field
 const providerUrls = Object.entries(providerSchemas).map(([name, schema]) => ({
     name,
     urlConfig: schema.urlConfig
@@ -31,74 +31,92 @@ const providerUrls = Object.entries(providerSchemas).map(([name, schema]) => ({
 // Function to fetch provider data from the API
 const fetchProviders = async ({ name, urlConfig }) => {
     try {
-        const providerResponse = await axios.post(urlConfig.url, urlConfig.data, { headers: urlConfig.headers })
-            ;
+        const providerResponse = urlConfig.data
+            ? await axios.post(urlConfig.url, urlConfig.data, { headers: urlConfig.headers })
+            : await axios.get(urlConfig.url, { headers: urlConfig.headers });
+
         let fullData = providerResponse.data;
         fullData.name = name; // Add the provider name to the data for identification
+
         const providerSchema = providerSchemas[name];
-        if (providerSchema && providerSchema.transformSchema && providerSchema.transformPath) {
+        if (providerSchema?.transformSchema && providerSchema.transformPath) {
             const path = providerSchema.transformPath;
             if (fullData[path]) {
                 fullData[path] = mergeData(fullData[path], providerSchema.transformSchema);
-                console.log(JSON.stringify(fullData))
             } else {
                 console.warn(`Path ${path} not found in provider data`);
             }
         }
         return fullData;
     } catch (error) {
-        console.error(`Error fetching provider information from ${url}:`, error.message);
-        throw new Error(`Failed to fetch data from provider: ${name}`);
+        console.error(`Error fetching provider information from ${urlConfig.url}:`, error.message);
+        return { error: `Failed to fetch data from provider: ${name}` }; // Handle error by returning an error object
     }
 };
 
 // Webhook function to handle the request
 const webhook = async (req, res) => {
-    console.log('providerUrls', providerUrls);
-    console.log('schema', providerSchemas);
-
     const { context } = req.body;
 
     try {
         if (context?.action === 'search') {
-            // Make parallel API calls to fetch provider information
-            async.map(providerUrls, fetchProviders, (err, dataArray) => {
-                if (err) {
-                    console.error("Error fetching provider information:", err);
-                    return res.status(500).send({ error: 'Failed to fetch provider information' });
-                }
+            context.action = 'on_search';
+            const results = await Promise.allSettled(providerUrls.map(fetchProviders));
+            const newObj = {
+                context,
+                message: catalogMessage.message
+            };
 
-                // Flatten the array of provider responses
-                const allData = [].concat(...dataArray);
-
-                // Initialize the new object structure
-                let newObj = { context, message };
-                newObj.message.catalog.providers = [];
-
-                // Process each provider's data
-                allData.forEach(data => {
-                    const schema = providerSchemas[data.name]; // Assuming provider name matches schema name
+            results.forEach(result => {
+                if (result.status === 'fulfilled' && !result.value.error) {
+                    const data = result.value;
+                    const schema = providerSchemas[data.name];
 
                     if (schema) {
-                        // Extract items from the response using the responsePath defined in the schema
                         const itemArray = lodash.get(data, schema.responsePath).map(item =>
-                            morphism(schema.itemSchema, item)
+                            objectMapper(item, schema.itemSchema)
                         );
-
-                        // Create a provider data object and add the transformed items
                         const providerData = { ...schema.providerSchema, items: itemArray };
                         newObj.message.catalog.providers.push(providerData);
                     } else {
                         console.error(`No schema found for provider name: ${data.name}`);
                     }
-                });
-
-                // Send the response
-                res.status(200).send(newObj);
+                } else if (result.status === 'rejected') {
+                    console.error(`Error fetching provider information: ${result.reason}`);
+                } else {
+                    console.error(`Provider data error: ${result.value.error}`);
+                }
             });
-        } else if (context.action === 'order') {
-            // Handle order action
-            // (Implementation would go here)
+
+            searchResponseData = newObj.message.catalog.providers;
+            res.status(200).send(newObj);
+        } else if (context?.action === 'select') {
+            context.action = 'on_select';
+            if (searchResponseData) {
+                const providerResult = lodash.find(searchResponseData, item => item.id.toLowerCase() === req.body.message.order.provider.id.toLowerCase());
+                if (providerResult) {
+                    const schema = providerSchemas[providerResult.id.toLowerCase()];
+                    const newObj = {
+                        context,
+                        message: orderMessage.message
+                    };
+
+                    if (schema) {
+                        const itemArray = lodash.filter(providerResult.items, item => item.id == req.body.message.order.items[0].id);
+                        const providerData = { ...schema.providerSchema, items: itemArray };
+
+                        newObj.message.order.provider = providerData;
+                        res.status(200).send(newObj);
+                    } else {
+                        console.error(`No schema found for provider name: ${providerResult.id}`);
+                        res.status(500).send({ error: 'Internal server error' });
+                    }
+                } else {
+                    res.status(404).send({ error: 'Provider not found' });
+                }
+            } else {
+                res.status(400).send({ error: 'No search data available' });
+            }
         } else {
             res.status(400).send({ error: 'Invalid action' });
         }

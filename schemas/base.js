@@ -1,11 +1,20 @@
 
-const message = {
-    catalog: {
-        descriptor: {
-            name: "Catalog for English courses"
-        },
-        providers: []
+const catalogMessage = {
+    message:{
+        catalog: {
+            descriptor: {
+                name: "Catalog for English courses"
+            },
+            providers: []
+        }
     }
 }
 
-module.exports = {message};
+const orderMessage = {
+    message: {
+        order: {
+            provider: {}
+        }
+    }
+}
+module.exports = { catalogMessage, orderMessage };
